@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.log
+
+# Emulator runtime state (pin persistence, created on first start)
+lanc_state.json
+
+# Local capture output from the emulator and probes.
+captures/
