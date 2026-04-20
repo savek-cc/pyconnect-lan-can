@@ -1,0 +1,10 @@
+services:
+  pyconnect-lan-can:
+    build: .
+    image: pyconnect-lan-can:latest
+    container_name: pyconnect-lan-can
+    restart: unless-stopped
+    network_mode: host
+    env_file: .env
+    volumes:
+      - ./config:/data

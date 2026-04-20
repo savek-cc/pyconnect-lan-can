@@ -110,6 +110,20 @@ the `can.interface` entry point.
    device list; pair with PIN `0` by default (or whatever PIN was last
    persisted).
 
+## Docker
+
+A `Dockerfile` and `docker-compose.yaml` are included. The compose file
+uses host networking (needed so the emulator receives the app's UDP
+discovery broadcast) and mounts `./config` for PIN persistence.
+
+```sh
+cp .env.example .env   # then edit BRIDGE_HOST
+docker compose up -d --build
+```
+
+All CLI flags are available as env vars (see `.env.example`); the
+container writes `lanc_state.json` into `./config/`.
+
 ## Using the python-can backend on its own
 
 Once the package is installed, any python-can tool can talk through the

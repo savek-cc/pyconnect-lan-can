@@ -14,3 +14,7 @@ lanc_state.json
 
 # Local capture output from the emulator and probes.
 captures/
+
+# Docker Compose runtime state and local env.
+config/
+.env
